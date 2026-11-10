@@ -61,7 +61,7 @@ Everything's a small from-scratch repo: bubblewrap jail, policy→sandbox compil
 canary scoring, a local-Qwen backend, a fault-deck benchmark.
 
 Honest about limits (tiny N, noisy small models). Writeup + code 👇
-[link]
+https://github.com/utsav1033/chor-police
 
 ---
 
@@ -95,7 +95,7 @@ Lesson 3: a 7B designed a sandbox that a (scaffolded) 7B attacker couldn't crack
 correctly, because a sound jail has no command-level escape.
 
 The leverage was never the model. It was the harness around it.
-Code + writeup 👇 [link]
+Code + writeup 👇 https://github.com/utsav1033/chor-police
 
 ---
 
@@ -104,12 +104,12 @@ Code + writeup 👇 [link]
 Spent an evening building an AI-vs-AI sandbox escape game. Found: (1) Claude
 refuses to be the attacker, (2) prompting beat model size, (3) a local 7B built a
 sandbox a 7B attacker couldn't crack. The model was never the interesting part —
-the harness was. [link]
+the harness was. https://github.com/utsav1033/chor-police
 
 ---
 
 ### Notes
-- Swap `[link]` for the repo/writeup URL.
+- Swap `https://github.com/utsav1033/chor-police` for the repo/writeup URL.
 - First tweet gets the diagram image (`docs/diagram.svg` → PNG).
 - Keep the honesty — the "illustrative, not rigorous" framing is part of why it
   reads as credible rather than hype.
