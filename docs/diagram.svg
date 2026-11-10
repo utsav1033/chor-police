@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 560" font-family="-apple-system, Segoe UI, Roboto, sans-serif">
+  <rect width="920" height="560" fill="#ffffff"/>
+  <text x="460" y="40" text-anchor="middle" font-size="24" font-weight="600" fill="#1a1a1a">Chor Police — architecture</text>
+  <text x="460" y="66" text-anchor="middle" font-size="14" fill="#666">model reasons outside · referee relays commands in · the jail is what gets escaped</text>
+
+  <!-- Mac region -->
+  <rect x="30" y="100" width="250" height="380" rx="16" fill="#eef2ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="155" y="128" text-anchor="middle" font-size="15" font-weight="600" fill="#3730a3">Your Mac (host)</text>
+
+  <rect x="55" y="150" width="200" height="90" rx="10" fill="#ffffff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="155" y="178" text-anchor="middle" font-size="14" font-weight="600" fill="#1a1a1a">Attacker / Defender</text>
+  <text x="155" y="200" text-anchor="middle" font-size="12" fill="#555">the model's BRAIN</text>
+  <text x="155" y="220" text-anchor="middle" font-size="11.5" fill="#777">Qwen (local MLX) ·</text>
+  <text x="155" y="234" text-anchor="middle" font-size="11.5" fill="#777">Claude (claude -p, your plan)</text>
+
+  <rect x="55" y="300" width="200" height="120" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5"/>
+  <text x="155" y="326" text-anchor="middle" font-size="14" font-weight="600" fill="#9a3412">Referee (script)</text>
+  <text x="155" y="348" text-anchor="middle" font-size="11.5" fill="#7c2d12">• the model's HANDS</text>
+  <text x="155" y="366" text-anchor="middle" font-size="11.5" fill="#7c2d12">• the JUDGE (canaries,</text>
+  <text x="155" y="380" text-anchor="middle" font-size="11.5" fill="#7c2d12">&#160;&#160;usability)</text>
+  <text x="155" y="400" text-anchor="middle" font-size="11.5" fill="#7c2d12">• the trust GATE</text>
+
+  <!-- VM region -->
+  <rect x="470" y="100" width="420" height="380" rx="16" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="680" y="128" text-anchor="middle" font-size="15" font-weight="600" fill="#166534">Disposable Linux VM — OrbStack, isolated</text>
+  <text x="680" y="148" text-anchor="middle" font-size="11.5" fill="#15803d">verified: can't read Mac files · can't run Mac commands · can't reach host</text>
+
+  <rect x="520" y="180" width="320" height="220" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="680" y="208" text-anchor="middle" font-size="14" font-weight="600" fill="#1a1a1a">bubblewrap jail  (the sandbox)</text>
+  <text x="680" y="228" text-anchor="middle" font-size="11.5" fill="#666">built from the defender's policy</text>
+
+  <rect x="545" y="248" width="270" height="52" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1"/>
+  <text x="680" y="270" text-anchor="middle" font-size="12.5" font-weight="600" fill="#166534">workspace  /home/chor/work</text>
+  <text x="680" y="288" text-anchor="middle" font-size="11" fill="#15803d">always mounted · must stay usable</text>
+
+  <rect x="545" y="314" width="270" height="66" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1"/>
+  <text x="680" y="336" text-anchor="middle" font-size="12.5" font-weight="600" fill="#991b1b">canary loot (fake tokens)</text>
+  <text x="680" y="354" text-anchor="middle" font-size="11" fill="#b91c1c">/home/host_flag.txt · /etc/app/secret.conf</text>
+  <text x="680" y="368" text-anchor="middle" font-size="11" fill="#b91c1c">network target · a sleeper process</text>
+
+  <!-- arrows: model -> referee -->
+  <line x1="155" y1="240" x2="155" y2="298" stroke="#6366f1" stroke-width="2" marker-end="url(#a)"/>
+  <text x="166" y="272" font-size="10.5" fill="#4f46e5">proposes 1 cmd</text>
+
+  <!-- referee -> box -->
+  <path d="M255 335 L520 290" stroke="#ea580c" stroke-width="2" fill="none" marker-end="url(#a)"/>
+  <text x="300" y="300" font-size="10.5" fill="#c2410c">runs it INSIDE</text>
+
+  <!-- box -> referee (output) -->
+  <path d="M520 360 L255 392" stroke="#16a34a" stroke-width="2" fill="none" marker-end="url(#a)"/>
+  <text x="300" y="392" font-size="10.5" fill="#15803d">output back</text>
+
+  <!-- feedback loop referee -> model -->
+  <path d="M120 300 L120 240" stroke="#ea580c" stroke-width="2" fill="none" marker-end="url(#a)"/>
+  <text x="18" y="275" font-size="10.5" fill="#c2410c">feeds result</text>
+
+  <text x="460" y="520" text-anchor="middle" font-size="13" fill="#444">The model never executes anything itself. It only proposes; the referee decides to run it in the jail — never on the Mac.</text>
+  <text x="460" y="540" text-anchor="middle" font-size="13" fill="#444">"Escape" = the commands breaking out of the jail. That is exactly how real AI-agent sandbox escape works.</text>
+
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="context-stroke" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+</svg>

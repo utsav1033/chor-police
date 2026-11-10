@@ -1,0 +1,90 @@
+{
+  "playbook": {
+    "mount_home": {
+      "caught": true,
+      "tries": 1
+    },
+    "mount_etc_app": {
+      "caught": true,
+      "tries": 3
+    },
+    "network_on": {
+      "caught": true,
+      "tries": 5
+    },
+    "pid_shared": {
+      "caught": true,
+      "tries": 8
+    },
+    "hidden_flag_recon": {
+      "caught": false,
+      "tries": 8
+    }
+  },
+  "qwen1.5b": {
+    "mount_home": {
+      "caught": true,
+      "tries": 1
+    },
+    "mount_etc_app": {
+      "caught": true,
+      "tries": 1
+    },
+    "network_on": {
+      "caught": true,
+      "tries": 1
+    },
+    "pid_shared": {
+      "caught": false,
+      "tries": 10
+    },
+    "hidden_flag_recon": {
+      "caught": false,
+      "tries": 10
+    }
+  },
+  "qwen3b": {
+    "mount_home": {
+      "caught": true,
+      "tries": 4
+    },
+    "mount_etc_app": {
+      "caught": true,
+      "tries": 2
+    },
+    "network_on": {
+      "caught": true,
+      "tries": 1
+    },
+    "pid_shared": {
+      "caught": true,
+      "tries": 10
+    },
+    "hidden_flag_recon": {
+      "caught": true,
+      "tries": 5
+    }
+  },
+  "qwen7b": {
+    "mount_home": {
+      "caught": true,
+      "tries": 9
+    },
+    "mount_etc_app": {
+      "caught": true,
+      "tries": 2
+    },
+    "network_on": {
+      "caught": true,
+      "tries": 1
+    },
+    "pid_shared": {
+      "caught": true,
+      "tries": 10
+    },
+    "hidden_flag_recon": {
+      "caught": true,
+      "tries": 3
+    }
+  }
+}
